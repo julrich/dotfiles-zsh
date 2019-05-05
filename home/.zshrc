@@ -137,16 +137,10 @@ plugins=(
   sudo
   tmux
   nvm
-  zsh-syntax-highlighting
+  homeshick
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
-
-# source homeshick for .dotfile management
-# @see: https://github.com/andsens/homeshick/wiki/Installation
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-# add completions
-# @see: https://github.com/andsens/homeshick/wiki/Installation#zsh-completion
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
