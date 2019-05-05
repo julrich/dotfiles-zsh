@@ -214,3 +214,6 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
+# check that local requirements are up-to-date once a week,
+# see: https://github.com/andsens/homeshick/wiki/Tutorials#refreshing
+homeshick --quiet refresh
