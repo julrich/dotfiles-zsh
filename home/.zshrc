@@ -214,13 +214,3 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-# don't break tmux stuff on exit() in shell, see:
-# https://nateeagle.com/2013/04/15/make-%27exit%27-detach-from-tmux-rather-than-close-a-window/
-#exit() {
-#    if [[ -z $TMUX ]]; then
-#        builtin exit
-#    else
-#        tmux detach
-#    fi
-#}
-
