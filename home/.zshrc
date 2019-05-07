@@ -173,9 +173,6 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_second
-
 # Add repository info
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
@@ -194,6 +191,9 @@ fi
 # Initialize SSH agent on start: https://serverfault.com/a/672386
 ssh-add -l |grep -q `ssh-keygen -lf ~/.ssh/id_rsa  | awk '{print $2}'` || ssh-add ~/.ssh/id_rsa
 ssh-add -l |grep -q `ssh-keygen -lf ~/.ssh/id_rsa_second  | awk '{print $2}'` || ssh-add ~/.ssh/id_rsa_second
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_second
 
 # Configure history: https://unix.stackexchange.com/a/273863
 export HISTSIZE=10000
