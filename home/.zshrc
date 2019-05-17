@@ -217,3 +217,4 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # check that local requirements are up-to-date once a week,
 # see: https://github.com/andsens/homeshick/wiki/Tutorials#refreshing
 homeshick --quiet refresh
+
