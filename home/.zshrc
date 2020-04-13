@@ -172,6 +172,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rm-cli="node ~/Projects/Entwicklung/code/rm-cli/index.js"
 
 # Add repository info
 autoload -Uz vcs_info
