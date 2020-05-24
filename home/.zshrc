@@ -139,6 +139,7 @@ plugins=(
   nvm
   homeshick
   zsh-autosuggestions
+  zsh-dircolors-solarized
   zsh-syntax-highlighting
 )
 
@@ -183,11 +184,6 @@ precmd() {
 
 # Taking notes: https://github.com/pimterry/notes
 export NOTES_DIRECTORY=~/.notes
-
-# Add dir_colors: https://github.com/seebi/dircolors-solarized https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
-if [ -f ~/.dir_colors ]; then  
-  eval `dircolors ~/.dir_colors`
-fi 
 
 # Initialize SSH agent on start: https://serverfault.com/a/672386
 ssh-add -l |grep -q `ssh-keygen -lf ~/.ssh/id_rsa  | awk '{print $2}'` || ssh-add ~/.ssh/id_rsa
