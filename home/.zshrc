@@ -32,6 +32,7 @@ SPACESHIP_PROMPT_ORDER=(
 
 SPACESHIP_RPROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
+  ruhmesmeile    # ruhmesmeile section
   #hg            # Mercurial section (hg_branch  + hg_status)
   #package       # Package version
   #node          # Node.js section
@@ -60,6 +61,8 @@ SPACESHIP_RPROMPT_ORDER=(
   jobs          # Background jobs indicator
   exit_code     # Exit code section
 )
+
+SPACESHIP_RUHMESMEILE_PREFIX=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,6 +117,7 @@ HIST_STAMPS="%m/%d"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ruhmesmeile
   git
   git-flow-avh
   node
