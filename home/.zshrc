@@ -63,6 +63,7 @@ SPACESHIP_RPROMPT_ORDER=(
 )
 
 SPACESHIP_RUHMESMEILE_PREFIX=""
+SPACESHIP_RUHMESMEILE_SUFFIX=" "
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
