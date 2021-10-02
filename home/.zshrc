@@ -118,18 +118,16 @@ HIST_STAMPS="%m/%d"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  wakatime
   ruhmesmeile
   git
-  git-flow-avh
   node
   docker
   docker-compose
   npm
-  bower
   extract
   z
   composer
-  gulp
   jira
   colorize
   rsync
@@ -220,3 +218,5 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # see: https://github.com/andsens/homeshick/wiki/Tutorials#refreshing
 homeshick --quiet refresh
 
+
+source /home/julrich/.config/broot/launcher/bash/br
