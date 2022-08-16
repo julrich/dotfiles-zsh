@@ -220,3 +220,12 @@ homeshick --quiet refresh
 
 
 source /home/julrich/.config/broot/launcher/bash/br
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/home/julrich/.local/share/gem/ruby/3.0.0/bin:$PATH"
+
+# begin kickstartDS completion
+. <(kickstartDS --completion)
+# end kickstartDS completion
+
+# Add rbenv for Ruby / Rails
+eval "$(rbenv init - zsh)"
