@@ -155,6 +155,20 @@ export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+# Update some variables from tmux
+if [ -n "$TMUX" ]; then                                                                               
+  function refresh {                                                                                
+    export $(tmux show-environment | grep "^XAUTHORITY")                                       
+    export $(tmux show-environment | grep "^DISPLAY")                                             
+  }                                                                                                 
+else                                                                                                  
+  function refresh { }                                                                              
+fi
+
+function preexec {                                                                                    
+    refresh                                                                                           
+}
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -220,12 +234,11 @@ homeshick --quiet refresh
 
 
 source /home/julrich/.config/broot/launcher/bash/br
+export NVS_HOME="$HOME/.nvs"
+source /opt/nvs/nvs.sh
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/bin:/opt/cuda/bin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/home/julrich/.local/share/gem/ruby/3.0.0/bin:$PATH"
-
-# begin kickstartDS completion
-. <(kickstartDS --completion)
-# end kickstartDS completion
+nvs auto on
 
 # Add rbenv for Ruby / Rails
 eval "$(rbenv init - zsh)"
